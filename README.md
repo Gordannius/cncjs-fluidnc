@@ -76,8 +76,6 @@ For a more complete introduction, see the [Introduction](https://github.com/cncj
 | 12      | Supported       |
 | >= 14   | Recommended     |
 
-!! NOTE: It is highly recommeded to install the latest version of Node.js or the latest LTS and not version 14 !!
-
 ## Getting Started
 
 ### Node.js Installation
@@ -99,22 +97,22 @@ export NVM_DIR="$HOME/.nvm"
 
 Once installed, you can select Node.js versions with:
 ```
-nvm install node  # "node" is an alias for the latest version
-nvm use node
+nvm install --lts  # "--lts" is an alias for the long term support version
+nvm use --lts
 
-# Or to use specific version:
-# nvm install 14
-# nvm use 14
+# To install specific version:
+# nvm install 24
+# nvm use 24
 ```
 
-It's also recommended that you upgrade npm to the latest version. To upgrade, run:
+Also install yarn with this command:
 ```
-npm install npm@latest -g
+npm install --global yarn
 ```
 
 ### Installation (using Git)
 
-If you prefer to use Git instead of `npm install`, You can create a local clone of the repository on your computer and sync from GitHub. Type the following commands to install and run `cncjs`:
+Type the following commands to install and run `cncjs`:
 ```
 git clone https://github.com/Gordannius/cncjs-fluidnc.git
 cd cncjs-fluidnc
@@ -131,9 +129,9 @@ To update your local copy with latest changes, use:
 ```
 git checkout master
 git pull origin master
-npm install
-npm run prepare
-./bin/cncjs
+yarn install
+yarn build-prod
+node bin/cncjs
 ```
 
 This is the fastest method to bring your local copy up-to-date.
