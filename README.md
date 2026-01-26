@@ -137,6 +137,12 @@ node bin/cncjs
 This is the fastest method to bring your local copy up-to-date.
 
 
+If you have any problems with connecting to your CNC on Linux, try adding yourself to these groups:
+```
+sudo usermod -a -G dialout $USER
+sudo usermod -a -G tty $USER
+```
+
 ### Usage
 
 Run `cncjs` to start the server, and visit `http://yourhostname:8000/` to view the web interface. Pass `--help` to `cncjs` for more options.
