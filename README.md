@@ -142,6 +142,11 @@ If you have any problems with connecting to your CNC on Linux, try adding yourse
 sudo usermod -a -G dialout $USER
 sudo usermod -a -G tty $USER
 ```
+Or also try rebuilding cncjs with serialport:
+```
+npm_config_unsafe_perm=true yarn add serialport
+yarn build-prod
+```
 
 ### Usage
 
